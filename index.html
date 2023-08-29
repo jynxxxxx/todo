@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="masterctn">
+        <div class="cntr">
+            <div class=header>To Do List</div>
+
+            <div class="sidebar">
+                <div class="label">Overview</div>
+                    <ul class="main">
+                        <li id="home">Home</li>
+                        <li id="today">Today</li>
+                        <li id="thisweek">This Week</li>
+                    </ul>
+                <div class="label catlabel">Categories
+                    <object class="addcat" data="./images/plus-circle.png"></object>
+                </div>
+                    <ul>
+                        <li class="default">Default</li>
+                    </ul>
+                    <ul class="categoryList">
+                    </ul>
+            </div>
+            
+            <div class="pagetitle"> All Tasks </div>
+            <div class="content"></div>
+
+            <div class="overlay">
+                <div class="popup">
+                    <div class="exit">
+                        <object class="exiticon" data="./images/x-mark.png"></object>
+                    </div>
+                    <div class="formcontainer"></div>
+                </div>
+            </div>
+            <div>
+                <object class="addtask" data="./images/plus-circle.png"></object>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
