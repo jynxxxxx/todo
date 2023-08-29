@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Permanent+Marker&family=Titan+One&display=swap');
+
+
+.masterctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(219, 236, 247);
+    background-image: url('./images/blanknotebook.png');
+    background-position:  calc(50% - 25px);
+    background-repeat: no-repeat;
+    background-size: 1300px 1000px;
+    margin: 0;
+}
+
+.cntr{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 10% 10% 80%;
+    width: 900px;
+    height: 80vh;
+    padding: 16px 32px;
+    position: relative;
+    column-gap: 36px;
+    font-family: 'Nunito', Verdana, sans-serif;
+}
+
+.header{
+    grid-column: 1/3;
+    font-size: 40px;
+    padding-top: 12px;
+    font-family: 'Titan One', Verdana, sans-serif;
+    letter-spacing: 4px;
+}
+
+.sidebar, .pagetitle{
+    padding-top: 24px;
+}
+
+.sidebar{
+    grid-row: 2/4;
+    border-right: grey 2px solid;
+    padding-right: 24px;
+}
+
+.pagetitle{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.label{
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.catlabel{
+    margin-top: 32px;
+}
+
+.default{
+    border-bottom: 0; 
+}
+
+.addcat{
+    position: absolute;
+    right: 24px;
+    top: 2px;
+}
+
+/* Icons */
+.category, .default, .taskcards, .main>li{
+    position: relative;
+    padding: 8px;
+}
+
+.category{
+    display: flex;
+    justify-content: space-between;
+}
+
+.category .icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.editicont{
+    position: absolute;
+    top:8px;
+    right: 42px;
+}
+
+.trashicont{
+    position: absolute;
+    top:8px;
+    right: 8px; 
+}
+
+.addtask{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1;
+}
+
+.content{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    overflow:auto
+}
+
+.exiticon{
+    height: 30px;
+}
+
+.addtask{
+    height: 50px;
+}
+
+ul{
+    list-style-type: none; 
+    list-style-position: inside;
+    padding: 0px;
+    margin: 0;
+}
+
+li{
+    font-size: 20px;
+}
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 244, 244, 0.75); 
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.taskcards{
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 30px repeat(5, 1fr);
+    border-bottom: lightgray 1px solid;
+    align-items: center;
+}
+
+.checkbox{
+    height:30px;
+    width: 50px;
+    grid-row: 1/6;
+    display: flex;
+    align-items: center;
+}
+
+.cardTitle{
+    font-size: 20px;
+}
+
+.checkbox:checked~div{
+    text-decoration: line-through;
+    color: lightgrey
+}
+
+.default, #home, #today, #thisweek{
+    display: flex;
+    width: fit-content;
+}
+
+#home:hover, #today:hover, #thisweek:hover, .default:hover, .categorytext:hover, .editicont:hover, .editiconc:hover, .trashiconc:hover, .trashicont:hover, .addtask:hover, .addcat:hover, .exiticon:hover{
+    transform: scale(1.2);
+}
+
